@@ -153,6 +153,7 @@ Requires **macOS 12.0 Monterey or newer**, including:
 - macOS 13 Ventura
 - macOS 14 Sonoma
 - macOS 15 Sequoia
+- macOS 26 Tahoe
 
 ### Hardware
 
