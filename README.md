@@ -11,4 +11,8 @@ Most Mac apps ship as *Universal Binaries* containing both `arm64` (Apple Silico
 
 Requires **macOS 12.0+** (Monterey or newer).
 
+<p align="center">
+  <img src="docs/images/scan-results.png" alt="MonoSlice lists apps with Universal Binaries and the space each one can free" width="640">
+</p>
+
 See [docs](docs/index.md) for full documentation.

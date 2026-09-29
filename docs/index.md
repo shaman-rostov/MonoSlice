@@ -10,6 +10,18 @@ MonoSlice is **free to use**, available as both a Mac app and a command-line too
 
 ---
 
+## Screenshots
+
+**Scan `/Applications`** — MonoSlice detects your Mac's architecture and finds apps that carry the slice you don't need.
+
+![MonoSlice start screen](images/start.png)
+
+**Pick what to slim** — see the potential savings per app, select the ones you want and optimize them in one pass.
+
+![MonoSlice scan results with potential savings per app](images/scan-results.png)
+
+---
+
 ## Why MonoSlice?
 
 Many macOS applications are distributed as **Universal Binaries**.

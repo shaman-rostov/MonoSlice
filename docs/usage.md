@@ -184,6 +184,18 @@ Try:
 
 ---
 
+### Optimization fails with a permission error
+
+On recent macOS versions, an app can only modify other apps if you allow it.
+
+1. Open **System Settings → Privacy & Security → App Management**.
+2. Turn on **MonoSlice**.
+3. Run the optimization again.
+
+![MonoSlice enabled in App Management](images/app-management.png)
+
+---
+
 ### No space was saved
 
 Some applications may contain:
