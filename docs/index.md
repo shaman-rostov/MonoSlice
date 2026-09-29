@@ -20,6 +20,10 @@ MonoSlice is **free to use**, available as both a Mac app and a command-line too
 
 ![MonoSlice scan results with potential savings per app](images/scan-results.png)
 
+**See what you recovered** — a summary shows the space saved and how many apps were slimmed.
+
+![MonoSlice summary of optimized apps and recovered space](images/summary.png)
+
 ---
 
 ## Why MonoSlice?
