@@ -15,4 +15,4 @@ Requires **macOS 12.0+** (Monterey or newer).
   <img src="docs/images/scan-results.png" alt="MonoSlice lists apps with Universal Binaries and the space each one can free" width="640">
 </p>
 
-See [docs](docs/index.md) for full documentation.
+See [docs](docs/index.md) for full documentation, and [Limitations and Risks](docs/limitations-and-risks.md) before optimizing important apps.

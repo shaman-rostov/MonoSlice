@@ -89,6 +89,20 @@ Re-signing would invalidate their App Store receipt, so they would refuse to lau
 
 ---
 
+## Why isn't MonoSlice on the Mac App Store?
+
+Mac App Store apps must run in the App Sandbox, can't ask for administrator rights and can't modify other apps. Those are exactly the things MonoSlice has to do, so it is distributed as a signed and notarized download from GitHub Releases instead.
+
+See [Limitations and Risks](limitations-and-risks.md#why-monoslice-is-not-on-the-mac-app-store).
+
+---
+
+## Which apps should I not optimize?
+
+Apps that handle passwords, money or security, apps you run under Rosetta to load Intel-only plug-ins, and apps with copy protection or anti-cheat. See [Risks to Consider](limitations-and-risks.md#risks-to-consider).
+
+---
+
 ## Does MonoSlice require an internet connection?
 
 No.

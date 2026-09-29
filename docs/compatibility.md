@@ -48,7 +48,7 @@ Removing an architecture invalidates an app's code signature, so MonoSlice re-si
 - Keychain items may prompt for access again.
 - An app update may bring back both architectures. Run MonoSlice again after updating.
 
-See [Safety](index.md#safety) and the [FAQ](faq.md) for more.
+See [Limitations and Risks](limitations-and-risks.md), [Safety](index.md#safety) and the [FAQ](faq.md) for more.
 
 ---
 
