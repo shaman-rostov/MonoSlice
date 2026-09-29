@@ -1,0 +1,5 @@
+# Keep the auto-generated "Source code" archives on releases minimal:
+# this repository only hosts docs and downloads, not the app source.
+* export-ignore
+README.md -export-ignore
+LICENSE -export-ignore
