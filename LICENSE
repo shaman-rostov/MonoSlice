@@ -1,0 +1,67 @@
+MonoSlice Freeware License
+
+Copyright (c) 2026 shaman-rostov. All rights reserved.
+
+This license governs use of the accompanying software application "MonoSlice"
+(the "Software"), distributed as a compiled, ready-to-run macOS application.
+The Software's source code is proprietary and is not distributed under this
+or any other open-source license.
+
+1. GRANT OF LICENSE
+
+Subject to the terms below, you are granted a free, non-exclusive,
+non-transferable license to install and use the Software, for personal or
+commercial purposes, on any number of Macs you own or control.
+
+2. RESTRICTIONS
+
+You may not:
+
+- Modify, decompile, disassemble, or reverse-engineer the Software, except
+  to the extent such restriction is prohibited by applicable law.
+- Redistribute, sell, rent, lease, sublicense, or otherwise make the
+  Software available to third parties other than by directing them to the
+  official distribution channel.
+- Remove or alter any copyright, trademark, or other proprietary notices
+  contained in the Software.
+- Use the Software to develop a competing product.
+
+3. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. USE OF THE SOFTWARE
+IS AT YOUR OWN RISK.
+
+The Software modifies other applications' binaries and re-signs them; while
+it is designed to leave the original application untouched if any step
+fails, you are responsible for keeping backups of applications you consider
+important before optimizing them.
+
+4. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE, INCLUDING BUT NOT LIMITED TO DAMAGE TO OR LOSS
+OF APPLICATIONS, DATA, OR SYSTEM FUNCTIONALITY.
+
+5. TERMINATION
+
+This license is effective until terminated. It will terminate automatically
+without notice if you fail to comply with any of its terms. Upon
+termination, you must stop using the Software and delete all copies of it.
+
+6. DOCUMENTATION AND ASSETS IN THIS REPOSITORY
+
+This repository contains only documentation, release downloads, and related
+project materials — not the Software's source code. Text and documentation
+in this repository may be reused for the purpose of referencing or
+discussing the Software (e.g. quoting or linking in articles, reviews),
+provided proper attribution is given; this does not grant any rights to
+the Software itself beyond Section 1.
+
+---
+
+For questions about this license, open an issue at
+https://github.com/shaman-rostov/MonoSlice/issues.
