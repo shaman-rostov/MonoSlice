@@ -39,6 +39,7 @@ MonoSlice modifies other applications' binaries and re-signs them, so its securi
 The following are **not** considered security vulnerabilities, but are documented, known trade-offs of the tool itself:
 
 - Ad-hoc re-signing resetting TCC permissions (camera, microphone, Full Disk Access) or Keychain access prompts — this is an unavoidable consequence of re-signing, and MonoSlice warns users before it happens. See the [Safety section](docs/index.md#safety) of the docs.
+- Optimized apps losing the Hardened Runtime, notarization and entitlements of their original signature — an ad-hoc signature cannot carry them. See [Limitations and Risks](docs/limitations-and-risks.md#what-changes-in-an-optimized-app).
 - An optimized app failing to launch due to app-specific protections not yet recognized by MonoSlice — please report this as a regular [bug](https://github.com/shaman-rostov/MonoSlice/issues), not a security issue.
 
 ---

@@ -180,6 +180,8 @@ Removing an architecture invalidates an app's code signature, so MonoSlice must 
 
 We still recommend keeping a backup copy of important applications. MonoSlice does not modify macOS system files.
 
+Read [Limitations and Risks](limitations-and-risks.md) before optimizing: it covers why MonoSlice is not on the Mac App Store, the permissions it needs, and what can go wrong with optimized apps (no undo, weaker runtime protection, updaters, Rosetta, migration to another Mac).
+
 ---
 
 ## Bug Reports

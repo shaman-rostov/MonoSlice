@@ -37,13 +37,9 @@ MonoSlice does not collect:
 
 ## Network Access
 
-MonoSlice does not require an internet connection for application optimization.
+MonoSlice does not access the network. It makes no network connections and works fully offline.
 
-Network access may only be used for:
-
-- Downloading updates
-- Accessing project documentation
-- Accessing support resources
+Updates, documentation and support are available on GitHub and are opened in your web browser, not by MonoSlice itself.
 
 ---
 
