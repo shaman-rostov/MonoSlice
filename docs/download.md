@@ -98,11 +98,11 @@ Each release contains:
 
 ## Security Notice
 
-MonoSlice is distributed outside the Mac App Store.
+MonoSlice is distributed outside the Mac App Store. It is signed with an Apple Developer ID certificate and notarized by Apple, so macOS Gatekeeper opens it without a warning.
 
-macOS may display a security warning when launching the application for the first time.
+On first launch macOS may still show the standard "downloaded from the Internet" prompt. Click **Open** to continue.
 
-If this happens:
+If macOS blocks the app anyway, make sure the file came from the official [GitHub Releases](https://github.com/shaman-rostov/MonoSlice/releases) page and matches the published SHA-256 checksum (see [Verify Download](#verify-download)). Then:
 
 1. Open **System Settings**.
 2. Go to **Privacy & Security**.
