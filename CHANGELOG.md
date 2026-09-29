@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+# Version 1.0.1
+
+### Fixed
+
+- The administrator password is now requested once per run instead of once per app. Apps that need administrator rights are prepared first and installed together in a single step; a failure in one app rolls back only that app.
+- Optimizing apps owned by root (for example those installed with a package installer) no longer fails with `Operation not permitted`.
+- Permission errors now start with a hint on how to fix them instead of a long list of file names.
+
+---
+
 # Version 1.0.0
 
 ## Initial Release
