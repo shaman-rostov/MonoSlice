@@ -8,6 +8,7 @@ MonoSlice requires **macOS 12.0 Monterey or newer**:
 - macOS 13 Ventura
 - macOS 14 Sonoma
 - macOS 15 Sequoia
+- macOS 26 Tahoe
 
 ---
 
