@@ -36,7 +36,7 @@ Open an issue describing the use case, not just the feature — what you're tryi
 
 ### Translations
 
-The Mac app currently supports English and Russian. If you'd like to help with additional languages or improve existing translations, open an issue describing the language and your proposed strings — translation work happens in the private app repository, but issues here are how it gets triaged and prioritized.
+The Mac app currently supports English, Russian, German, Spanish, Polish and Czech. If you'd like to help with additional languages or improve existing translations, open an issue describing the language and your proposed strings — translation work happens in the private app repository, but issues here are how it gets triaged and prioritized.
 
 ---
 
