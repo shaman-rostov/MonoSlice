@@ -104,7 +104,7 @@ Use MonoSlice as a regular Dock app, or enable **Settings → Keep MonoSlice in 
 
 ### Multilingual interface
 
-The Mac app is available in English, Russian, German, Spanish, Polish and Czech. It follows your macOS language (English if that language isn't translated), or pick one in **Settings → Language**.
+The Mac app is available in English, Russian, German, Spanish, Polish and Czech. It follows the language set for MonoSlice in macOS, otherwise your macOS language (English if that language isn't translated), or pick one in **Settings → Language** — see [Interface Language](usage.md#interface-language).
 
 ---
 
