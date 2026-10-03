@@ -166,6 +166,16 @@ Recommended checks:
 
 ---
 
+## Interface Language
+
+The Mac app is available in English, Russian, German, Spanish, Polish and Czech.
+
+By default (**Settings → Language → System**) MonoSlice uses the language set for it in **System Settings → General → Language & Region → Applications**, otherwise your macOS language. If that language isn't translated, it uses English.
+
+To choose a language explicitly, open **Settings → Language** and pick one. The window switches right away, without closing open dialogs. Menus provided by macOS (Edit, Window, Quit…) switch after MonoSlice is relaunched.
+
+---
+
 ## Troubleshooting
 
 ### Application does not start
