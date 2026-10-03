@@ -22,7 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Fixed
 
-- Changing the language in Settings no longer closes an open dialog (such as the "Optimize selected apps?" confirmation), and keeps the app list's scroll position and filter.
+- Changing the language in Settings no longer closes an open dialog (such as the "Optimize selected apps?" confirmation), and keeps the app list's scroll position.
 
 ---
 
