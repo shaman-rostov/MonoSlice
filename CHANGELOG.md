@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Changed
 
-- The administrator-permission prompt now describes what actually needs administrator rights: replacing an optimized app in a protected location. `lipo` and `codesign` never run as administrator.
+- Corrected the app's description of when it uses administrator rights: only to replace an optimized app in a protected location and verify its signature. `lipo` and code signing never run as administrator.
 
 ---
 
@@ -31,7 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 
 - Localized interface: English and Russian.
-- **Settings → Language.** *System* (the default) follows the language set for MonoSlice in **System Settings → General → Language & Region → Applications**, otherwise the macOS language, and falls back to English when that language isn't translated. An explicit choice switches the app right away; menus provided by macOS (Edit, Window, Quit…) follow after MonoSlice is relaunched.
+- **Settings → Language.** *System* (the default) follows the language set for MonoSlice in **System Settings → General → Language & Region → Applications** (on macOS 12 Monterey: **System Preferences → Language & Region → Apps**), otherwise the macOS language, and falls back to English when that language isn't translated. An explicit choice switches the app right away; menus provided by macOS (Edit, Window, Quit…) follow after MonoSlice is relaunched.
 
 ### Fixed
 
