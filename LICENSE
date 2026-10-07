@@ -61,6 +61,33 @@ discussing the Software (e.g. quoting or linking in articles, reviews),
 provided proper attribution is given; this does not grant any rights to
 the Software itself beyond Section 1.
 
+7. CONTRIBUTIONS
+
+By submitting a contribution to this repository (for example, a pull
+request, issue text, or proposed translation strings), you confirm that you
+have the right to submit it, and you grant the author a perpetual,
+worldwide, non-exclusive, royalty-free, irrevocable license to use, copy,
+modify, publish, and distribute that contribution, including in the
+Software and its documentation, under any terms the author chooses.
+
+8. CHANGES TO THIS LICENSE
+
+The author may change the terms of this license at any time. Each version
+of the Software is governed by the license published with that version.
+Future versions of the Software may be distributed under different terms;
+continuing to use a version you already have remains governed by the
+license that came with it.
+
+9. GOVERNING LAW
+
+This license is governed by the laws of the Czech Republic, excluding its
+conflict-of-law rules and the United Nations Convention on Contracts for
+the International Sale of Goods. Any dispute arising out of or in
+connection with this license or the Software shall be subject to the
+jurisdiction of the courts of the Czech Republic. Nothing in this license
+limits any mandatory rights you may have as a consumer under the laws of
+your country of residence.
+
 ---
 
 For questions about this license, open an issue at
