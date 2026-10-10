@@ -36,7 +36,7 @@ Open an issue describing the use case, not just the feature — what you're tryi
 
 ### Translations
 
-The Mac app currently supports English, Russian, German, Spanish, Polish and Czech. If you'd like to help with additional languages or improve existing translations, open an issue describing the language and your proposed strings — translation work happens in the private app repository, but issues here are how it gets triaged and prioritized.
+The Mac app currently supports English, Russian, German, Spanish, Polish and Czech. If you'd like to help with additional languages or improve existing translations, open an issue describing the language and your proposed strings — translation work happens in the private app repository, but issues here are how it gets triaged and prioritized. Strings you propose may be shipped in the app, under the terms in [License](#license) below.
 
 ---
 
@@ -49,4 +49,11 @@ The Mac app currently supports English, Russian, German, Spanish, Polish and Cze
 
 ## License
 
-Contributions to this repository's documentation are made under the terms described in [LICENSE](LICENSE). The MonoSlice application itself remains closed-source and is not affected by contributions here.
+Contributions are covered by [Section 7 of the LICENSE](LICENSE). In short, by opening a pull request, writing an issue, or proposing translation strings, you:
+
+- Confirm that you have the right to submit what you're contributing — it's your own work, or you're allowed to share it.
+- Grant the author a permanent, free, non-exclusive license to use, modify, and publish your contribution, including inside the closed-source MonoSlice app and its documentation.
+
+You keep the copyright to your contribution, and you're free to use it elsewhere. If you don't want to grant these rights, please don't submit the contribution.
+
+The MonoSlice application itself remains closed-source; contributing here does not give you any rights to its source code.
