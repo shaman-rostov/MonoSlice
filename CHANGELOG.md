@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+# Version 1.2.1
+
+### Fixed
+
+- Grammar in the Polish, Czech and Spanish translations: counts now agree with the words around them, for example "1 aplikację" in the system-apps confirmation, "a 1 další" and "1 optimizada".
+
+---
+
 # Version 1.2.0
 
 ### Added
