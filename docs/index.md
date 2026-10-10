@@ -175,12 +175,13 @@ Removing an architecture invalidates an app's code signature, so MonoSlice must 
 - **Ad-hoc re-signing changes the app's identity.** macOS will ask you to re-grant permissions such as camera, microphone, and Full Disk Access, and existing Keychain items will re-prompt for access. MonoSlice warns you before optimizing an app.
 - **Mac App Store apps are skipped.** Re-signing would invalidate their App Store receipt and they would refuse to launch.
 - **System apps** (in `/System`, `/Library/Apple`, or with a `com.apple.*` identifier) are deselected by default; you can include them individually, with a warning.
-- **Apps that need entitlements an ad-hoc signature can't keep are skipped** — App Sandbox, app groups, keychain groups, and similar. Re-signing would drop these, breaking the app's data access or features.
-- The original app is never modified in place — MonoSlice works on a verified copy and only replaces the original once that copy is confirmed to launch correctly. If any step fails, the original app is left exactly as it was.
+- **Apps that need entitlements an ad-hoc signature can't keep are skipped** — App Sandbox, app groups, keychain groups, and similar. Without them the app would lose its data access or features.
+- **The Hardened Runtime is kept**, together with the entitlements an ad-hoc signature can carry (JIT, camera, microphone…). Library validation is turned off, since an ad-hoc signature has no developer identity.
+- The original app is never modified in place — MonoSlice works on a verified copy and only replaces the original once that copy has passed signature verification. If any step fails, the original app is left exactly as it was.
 
-We still recommend keeping a backup copy of important applications. MonoSlice does not modify macOS system files.
+We still recommend keeping a backup copy of important applications, or turning on **Settings → Move originals to the Trash**. Apps you never want touched can be marked **Never Optimize**. MonoSlice does not modify macOS system files.
 
-Read [Limitations and Risks](limitations-and-risks.md) before optimizing: it covers why MonoSlice is not on the Mac App Store, the permissions it needs, and what can go wrong with optimized apps (no undo, weaker runtime protection, updaters, Rosetta, migration to another Mac).
+Read [Limitations and Risks](limitations-and-risks.md) before optimizing: it covers why MonoSlice is not on the Mac App Store, the permissions it needs, and what can go wrong with optimized apps (undo only through the Trash, weaker runtime protection, updaters, Rosetta, migration to another Mac).
 
 ---
 
@@ -208,7 +209,7 @@ Please include:
 Planned features:
 
 - [ ] Finder Quick Action
-- [ ] Automatic backups
+- [x] Keep originals in the Trash (1.3.0)
 - [ ] Detailed optimization reports
 
 ---

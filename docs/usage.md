@@ -141,6 +141,7 @@ monoslice ~/Downloads/MyApp.app --verbose
 | `--verbose` / `-v` | Show a line for every file, including skipped ones. |
 | `--keep-arch <arch>` | Architecture to keep (`arm64` or `x86_64`). Defaults to the host. |
 | `--include-system` | Also slim Apple's own apps (skipped by default). |
+| `--keep-originals` | Move each original bundle to the Trash instead of deleting it. |
 
 ---
 
@@ -148,9 +149,23 @@ monoslice ~/Downloads/MyApp.app --verbose
 
 MonoSlice does not modify system applications automatically.
 
-For important applications, keep a backup copy before optimization.
+For important applications, keep a backup copy before optimization, or turn on **Settings → Move originals to the Trash**. The original of each optimized app then goes to the Trash instead of being deleted; to restore it, quit the app, delete the optimized copy and drag the original back. The space is freed when you empty the Trash.
 
-If you need the original Universal Binary again, reinstall the application from the official source.
+If you need the original Universal Binary again and it isn't in the Trash, reinstall the application from the official source.
+
+---
+
+## Excluding Applications
+
+To make sure an app is never optimized (for example a password manager or VPN), click the hand button next to it in the list, or right-click it and choose **Never Optimize**. The app stays in the list, dimmed, and can't be selected. Click the hand again to allow it.
+
+**Settings → Excluded apps** lists all excluded apps. Use **Add App…** to exclude apps that aren't in the list, and the minus button to remove an exclusion.
+
+---
+
+## After App Updates
+
+An update usually brings back the Universal binaries. MonoSlice remembers the apps it optimized: when one shows up in a scan again, it is marked **Universal again**, and its tooltip says when it was optimized. **Settings → History** shows how much space MonoSlice has saved so far.
 
 ---
 

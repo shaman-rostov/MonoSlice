@@ -58,7 +58,9 @@ The application continues running natively.
 
 MonoSlice does not provide a reverse conversion.
 
-To restore the original Universal Binary:
+If **Settings → Move originals to the Trash** was on when you optimized the app, its original is in the Trash: quit the app, delete the optimized copy and drag the original back to its folder.
+
+Otherwise, to restore the original Universal Binary:
 
 1. Replace the optimized application with a backup copy.
 2. Download the original application again from the official source.

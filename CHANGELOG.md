@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+# Version 1.3.0
+
+### Added
+
+- **Move originals to the Trash** (Settings; `--keep-originals` in the command-line tool). The original of each optimized app goes to the Trash instead of being deleted, so it can be put back.
+- **Never Optimize.** A hand button next to each app in the list (or its context menu) excludes it; excluded apps can't be selected. Settings lists them and can add apps that aren't in the list.
+- **History.** Apps that an update made Universal again are marked in the list, and Settings shows how much space MonoSlice has saved.
+
+### Changed
+
+- Optimized apps keep the **Hardened Runtime** and the entitlements an ad-hoc signature can carry (JIT, camera, microphone…). Before, both were removed. Library validation is turned off for re-signed code, because an ad-hoc signature has no developer identity.
+
+---
+
 # Version 1.2.1
 
 ### Fixed

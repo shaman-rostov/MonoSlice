@@ -51,8 +51,8 @@ Removing an architecture invalidates an app's code signature. MonoSlice re-signs
 | --- | --- |
 | Signed with the developer's Developer ID | Ad-hoc signature, no developer identity |
 | Notarized by Apple | No longer notarized |
-| Hardened Runtime enabled (for most apps) | Hardened Runtime **not** enabled |
-| Entitlements from the developer | Entitlements removed |
+| Hardened Runtime enabled (for most apps) | Hardened Runtime kept, with library validation turned off |
+| Entitlements from the developer | `com.apple.security.*` entitlements kept (JIT, camera, microphone…); others removed |
 | Permissions (camera, microphone, Full Disk Access…) granted | Must be granted again |
 | Keychain items accessible silently | Keychain may prompt for access again |
 
@@ -62,9 +62,11 @@ macOS identifies an app by its signature. After re-signing, it treats the optimi
 
 ### Weaker runtime protection
 
-Most apps from established developers are signed with the **Hardened Runtime**, which, among other things, stops unsigned code from being injected into the app. An ad-hoc signature does not keep it. The optimized app works the same way, but it has less protection against tampering by other software on your Mac.
+Most apps from established developers are signed with the **Hardened Runtime**, which, among other things, stops code from being injected into the app. Since version 1.3.0, MonoSlice keeps it: an optimized app still ignores `DYLD_*` injection variables and keeps the runtime exceptions and resource access (JIT, camera, microphone…) its developer declared.
 
-If an app handles sensitive data (password managers, banking, crypto wallets, VPN and security software), we recommend **not** optimizing it.
+One protection has to go: **library validation**, which only lets the app load code signed by the same developer. An ad-hoc signature has no developer identity, so with library validation on, the app could not even load its own frameworks and would crash at launch. MonoSlice turns it off for re-signed code. As a result, the optimized app has less protection against malicious code that another program has already placed among its files, while protection against injecting code at launch stays.
+
+If an app handles sensitive data (password managers, banking, crypto wallets, VPN and security software), we recommend **not** optimizing it. Mark such apps with the hand button (**Never Optimize**) in the app list, so they can't be selected by accident.
 
 ### Apps MonoSlice refuses to optimize
 
@@ -81,13 +83,17 @@ To avoid breaking apps, MonoSlice skips:
 
 MonoSlice checks every optimized app with `codesign --verify` before it replaces the original, and leaves the original untouched if anything fails. Some problems can still only show up later, when you use the app.
 
-### No undo
+### Undo only through the Trash
 
-MonoSlice does not keep the removed architecture and cannot restore it. To get the original Universal app back, reinstall it from the developer or restore it from a backup. **Keep a backup of any app you can't easily download again.**
+By default MonoSlice deletes the original app once the optimized copy is in place and verified, and it cannot restore the removed architecture later.
+
+To keep a way back, turn on **Settings → Move originals to the Trash** (`--keep-originals` in the command-line tool). The original of each optimized app then goes to the Trash instead of being deleted. To restore it, quit the app, delete the optimized copy and drag the original from the Trash back to its folder. The space is freed only when you empty the Trash.
+
+Without that setting, reinstall the app from its developer or restore it from a backup. **Keep a backup of any app you can't easily download again.**
 
 ### App updates
 
-- An update usually replaces the optimized app with a new Universal build, so the space comes back. Run MonoSlice again after updating.
+- An update usually replaces the optimized app with a new Universal build, so the space comes back. Run MonoSlice again after updating: apps it optimized before are marked **Universal again** in the list.
 - Built-in updaters sometimes check that the installed app is signed by the same developer as the update. Because the optimized app has an ad-hoc signature, such an updater may refuse to install the update. If that happens, download the new version from the developer's website.
 
 ### Apps that check themselves
@@ -122,9 +128,9 @@ Changing Apple's own apps can break system features or be undone by a macOS upda
 
 ## Recommendations
 
-1. Keep backups of important apps, or make sure you can download them again.
+1. Keep backups of important apps, or make sure you can download them again. Consider turning on **Move originals to the Trash**.
 2. Start with large apps you don't rely on for sensitive work, and check that they launch and work normally.
-3. Don't optimize apps that handle passwords, money or security, apps you run under Rosetta, or apps with copy protection.
+3. Don't optimize apps that handle passwords, money or security, apps you run under Rosetta, or apps with copy protection. Mark them **Never Optimize**.
 4. Re-run MonoSlice after app updates instead of expecting the savings to persist.
 5. Before migrating to a Mac with a different processor, reinstall optimized apps from their developers.
 
