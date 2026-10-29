@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+# Version 1.4.0
+
+### Added
+
+- **Quit and Optimize.** When selected apps are running, the confirmation offers to quit them first. Each one is asked to quit (and can still ask to save your work) right before it is optimized; an app that doesn't quit within 20 seconds is skipped.
+- **Only Updated.** A button in the list selects just the apps an update made Universal again.
+- **Update check.** MonoSlice checks GitHub Releases for a newer version every few days and shows a banner with **Download** and **Skip This Version**. Turn it off in **Settings → Check for updates automatically**.
+- **Remove unused languages** (optional, off by default: **Settings → Also remove unused languages**; `--strip-languages` in the command-line tool). Translations of optimized apps into languages other than English and the ones in **System Settings → Language & Region** are removed too. An app is optimized for its languages alone only when that frees at least 1 MB.
+- **Copy Report** in the summary copies the results and MonoSlice's log of the run, to attach to a bug report.
+
+### Changed
+
+- MonoSlice no longer replaces an app while it, or any of its helpers, is running: it would load re-signed code later and could crash. Such apps are skipped unless you choose **Quit and Optimize**.
+- Optimized apps are checked with the strict signature check (`codesign --strict`) whenever the original passes it, which also catches broken links inside the app. Apps that already fail it as shipped are checked as before.
+
+---
+
 # Version 1.3.0
 
 ### Added

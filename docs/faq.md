@@ -109,7 +109,7 @@ Apps that handle passwords, money or security, apps you run under Rosetta to loa
 
 No.
 
-MonoSlice works completely offline.
+MonoSlice works offline. Every few days it checks GitHub for a newer version (you can turn this off in **Settings → Check for updates automatically**); nothing else goes over the network.
 
 Internet access is only required for:
 
@@ -146,7 +146,7 @@ Application updates replace the optimized application with a new version.
 
 The new version may contain both architectures again.
 
-Simply run MonoSlice on the updated application.
+Simply run MonoSlice on the updated application. Apps it optimized before are marked **Universal again**, and **Only Updated** selects just those.
 
 ---
 

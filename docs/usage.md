@@ -10,7 +10,7 @@ The entire process takes only a few steps.
 
 Before optimizing an application:
 
-- Make sure the application is closed.
+- Quit the applications you want to optimize, or choose **Quit and Optimize** when MonoSlice offers it.
 - Create a backup of important applications.
 - Ensure you have enough free disk space for the optimized copy.
 
@@ -142,6 +142,7 @@ monoslice ~/Downloads/MyApp.app --verbose
 | `--keep-arch <arch>` | Architecture to keep (`arm64` or `x86_64`). Defaults to the host. |
 | `--include-system` | Also slim Apple's own apps (skipped by default). |
 | `--keep-originals` | Move each original bundle to the Trash instead of deleting it. |
+| `--strip-languages` | Also remove the app's translations into languages other than English and the ones in System Settings. |
 
 ---
 
@@ -165,7 +166,21 @@ To make sure an app is never optimized (for example a password manager or VPN), 
 
 ## After App Updates
 
-An update usually brings back the Universal binaries. MonoSlice remembers the apps it optimized: when one shows up in a scan again, it is marked **Universal again**, and its tooltip says when it was optimized. **Settings → History** shows how much space MonoSlice has saved so far.
+An update usually brings back the Universal binaries. MonoSlice remembers the apps it optimized: when one shows up in a scan again, it is marked **Universal again**, and its tooltip says when it was optimized. **Only Updated** above the list selects just those apps. **Settings → History** shows how much space MonoSlice has saved so far.
+
+---
+
+## Unused Languages
+
+Many apps ship translations into dozens of languages. Turn on **Settings → Also remove unused languages** (`--strip-languages` in the command-line tool) to remove them from the apps you optimize. Kept are English, every language in **System Settings → General → Language & Region**, the language the app was developed in, and anything MonoSlice can't identify as a language. The setting applies from the next scan.
+
+An app with nothing else to optimize is processed for its languages only when that frees at least 1 MB. Once a language is removed, the app can't be switched to it until it is reinstalled — see [Removed languages](limitations-and-risks.md#removed-languages).
+
+---
+
+## Updates of MonoSlice
+
+Every few days MonoSlice checks GitHub Releases for a newer version and shows a banner with **Download** and **Skip This Version**. Turn this off in **Settings → Check for updates automatically**.
 
 ---
 
@@ -206,6 +221,12 @@ Try:
 1. Restore the original application.
 2. Re-download the application.
 3. Run MonoSlice again.
+
+---
+
+### Reporting a problem
+
+After a run, **Copy Report** in the summary copies the results and MonoSlice's log of that run. Paste it into your [bug report](https://github.com/shaman-rostov/MonoSlice/issues).
 
 ---
 

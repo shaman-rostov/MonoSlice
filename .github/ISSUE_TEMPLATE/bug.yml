@@ -57,5 +57,5 @@ body:
     id: logs
     attributes:
       label: Logs or error output
-      description: For the CLI, run with `--verbose` and paste the output.
+      description: In the Mac app, click **Copy Report** in the summary after the run and paste it here. For the CLI, run with `--verbose` and paste the output.
       render: shell

@@ -102,6 +102,12 @@ Use MonoSlice as a regular Dock app, or enable **Settings → Keep MonoSlice in 
 
 ---
 
+### Unused languages (optional)
+
+Turn on **Settings → Also remove unused languages** to also remove the translations of optimized apps into languages you don't use. English and the languages in **System Settings → Language & Region** are kept — see [Unused Languages](usage.md#unused-languages).
+
+---
+
 ### Multilingual interface
 
 The Mac app is available in English, Russian, German, Spanish, Polish and Czech. It follows the language set for MonoSlice in macOS, otherwise your macOS language (English if that language isn't translated), or pick one in **Settings → Language** — see [Interface Language](usage.md#interface-language).
@@ -110,7 +116,7 @@ The Mac app is available in English, Russian, German, Spanish, Polish and Czech.
 
 ### Privacy first
 
-MonoSlice works completely offline.
+MonoSlice works offline. The only network request is an optional check for a newer MonoSlice on GitHub every few days.
 
 Your applications and files never leave your Mac.
 
@@ -195,6 +201,7 @@ https://github.com/shaman-rostov/MonoSlice/issues
 
 Please include:
 
+- the report from **Copy Report** in the summary, if the problem happened while optimizing
 - macOS version
 - Mac model
 - Application name
@@ -210,6 +217,7 @@ Planned features:
 
 - [ ] Finder Quick Action
 - [x] Keep originals in the Trash (1.3.0)
+- [x] Remove unused languages (1.4.0)
 - [ ] Detailed optimization reports
 
 ---

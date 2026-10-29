@@ -37,9 +37,9 @@ MonoSlice does not collect:
 
 ## Network Access
 
-MonoSlice does not access the network. It makes no network connections and works fully offline.
+MonoSlice makes one kind of network request: every few days it asks GitHub for the latest MonoSlice release (`api.github.com/repos/shaman-rostov/MonoSlice/releases/latest`) to tell you when an update is available. The request carries no information about your apps or files. Turn it off in **Settings → Check for updates automatically**; MonoSlice then makes no network connections at all.
 
-Updates, documentation and support are available on GitHub and are opened in your web browser, not by MonoSlice itself.
+MonoSlice doesn't download or install updates itself. Updates, documentation and support are opened in your web browser.
 
 ---
 

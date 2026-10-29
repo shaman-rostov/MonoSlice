@@ -39,7 +39,7 @@ MonoSlice uses AppleScript (`osascript`) to show this prompt, so macOS may also 
 
 ### Manual updates
 
-MonoSlice does not update itself. Check [GitHub Releases](https://github.com/shaman-rostov/MonoSlice/releases) for new versions and [verify the download](download.md#verify-download) before installing.
+MonoSlice does not update itself. It tells you when [GitHub Releases](https://github.com/shaman-rostov/MonoSlice/releases) has a new version (unless you turned off **Settings → Check for updates automatically**); download it there and [verify the download](download.md#verify-download) before installing.
 
 ---
 
@@ -114,7 +114,11 @@ An optimized app is signed ad-hoc and is not notarized. If you send it to anothe
 
 ### Apps that are running
 
-Quit an app before optimizing it. Replacing the files of a running app can make it crash or behave unexpectedly until it is restarted.
+MonoSlice doesn't replace an app while it, or any of its helpers, is running: the app would load re-signed code later and could crash. When selected apps are running, choose **Quit and Optimize** to quit each one right before it is optimized (it can still ask you to save your work); an app that doesn't quit within 20 seconds is skipped. The command-line tool skips running apps.
+
+### Removed languages
+
+With **Settings → Also remove unused languages** on, an optimized app keeps only English, the languages in **System Settings → Language & Region**, and the language it was developed in. If you add a language later, the app can't switch to it until you reinstall it (or restore its original from the Trash). Apps that check their own files may react to removed languages the same way as to removed architectures.
 
 ### Managed Macs
 
